@@ -33,7 +33,11 @@
       "mcp__mcp-chrome__chrome_console",
       "Bash(pnpm test:*)",
       "mcp__mcp-chrome__get_windows_and_tabs",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git remote set-url:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git pull:*)"
     ],
     "deny": [],
     "ask": []
