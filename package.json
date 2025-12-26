@@ -1,7 +1,7 @@
 {
   "name": "troila-pro-components",
   "private": false,
-  "version": "1.0.0",
+  "version": "3.0.1",
   "description": "基于 shadcn/ui 的业务组件库，包含 ProTable、ProForm 等复合组件",
   "keywords": [
     "react",
