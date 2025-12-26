@@ -1,23 +1,52 @@
 {
-  "name": "vite-component-library-template",
+  "name": "troila-pro-components",
   "private": false,
-  "version": "3.0.1",
+  "version": "1.0.0",
+  "description": "基于 shadcn/ui 的业务组件库，包含 ProTable、ProForm 等复合组件",
   "packageManager": "pnpm@10.12.1",
   "repository": {
     "type": "git",
     "url": "https://github.com/IgnacioNMiranda/vite-component-library-template"
   },
-  "main": "./dist/vite-component-library-template.umd.js",
-  "module": "./dist/vite-component-library-template.es.js",
+  "main": "./dist/troila-pro-components.umd.js",
+  "module": "./dist/troila-pro-components.es.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/vite-component-library-template.es.js",
-      "require": "./dist/vite-component-library-template.umd.js"
+      "import": "./dist/index.js",
+      "require": "./dist/troila-pro-components.umd.js"
     },
-    "./styles.css": "./dist/vite-component-library-template.css"
+    "./styles.css": "./dist/troila-pro-components.css",
+    "./ui/*": {
+      "types": "./dist/components/ui/*.d.ts",
+      "import": "./dist/components/ui/*.js"
+    },
+    "./base/*": {
+      "types": "./dist/components/base/*.d.ts",
+      "import": "./dist/components/base/*.js"
+    },
+    "./pro/pro-table": {
+      "types": "./dist/components/pro/pro-table/index.d.ts",
+      "import": "./dist/components/pro/pro-table/index.js"
+    },
+    "./pro/pro-form": {
+      "types": "./dist/components/pro/pro-form/index.d.ts",
+      "import": "./dist/components/pro/pro-form/index.js"
+    },
+    "./pro/pro-form/fields/*": {
+      "types": "./dist/components/pro/pro-form/fields/*.d.ts",
+      "import": "./dist/components/pro/pro-form/fields/*.js"
+    },
+    "./utils": {
+      "types": "./dist/utils.d.ts",
+      "import": "./dist/utils.js"
+    }
   },
+  "sideEffects": [
+    "*.css",
+    "./src/lib/tailwind/theme.css"
+  ],
   "engines": {
     "node": ">=22"
   },
@@ -32,8 +61,35 @@
     "prepack": "json -f package.json -I -e \"delete this.devDependencies; delete this.dependencies\""
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.2.2",
+    "@radix-ui/react-checkbox": "^1.3.3",
+    "@radix-ui/react-dialog": "^1.1.15",
+    "@radix-ui/react-dropdown-menu": "^2.1.16",
+    "@radix-ui/react-label": "^2.1.8",
+    "@radix-ui/react-popover": "^1.1.15",
+    "@radix-ui/react-progress": "^1.1.8",
+    "@radix-ui/react-radio-group": "^1.3.8",
+    "@radix-ui/react-select": "2.2.6",
+    "@radix-ui/react-separator": "^1.1.8",
+    "@radix-ui/react-slot": "^1.2.4",
+    "@radix-ui/react-switch": "^1.2.6",
+    "@radix-ui/react-tabs": "^1.1.13",
+    "@radix-ui/react-tooltip": "^1.2.8",
+    "@tanstack/react-table": "^8.21.3",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "date-fns": "^4.1.0",
+    "lucide-react": "^0.562.0",
+    "next-themes": "^0.4.6",
     "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react-day-picker": "^9.13.0",
+    "react-dom": "19.1.0",
+    "react-dropzone": "^14.3.8",
+    "react-hook-form": "^7.69.0",
+    "sonner": "^2.0.7",
+    "tailwind-merge": "^3.4.0",
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^4.2.1"
   },
   "devDependencies": {
     "@babel/core": "7.27.4",
@@ -45,12 +101,15 @@
     "@storybook/test": "8.6.14",
     "@tailwindcss/postcss": "4.1.10",
     "@tailwindcss/vite": "4.1.10",
+    "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "16.3.0",
+    "@testing-library/user-event": "^14.6.1",
     "@types/node": "24.0.3",
     "@types/react": "19.1.8",
     "@types/react-dom": "19.1.6",
     "@vitejs/plugin-react": "4.5.2",
     "@vitest/coverage-v8": "3.2.4",
+    "@vitest/ui": "^4.0.16",
     "autoprefixer": "10.4.21",
     "babel-loader": "10.0.0",
     "husky": "9.1.7",
@@ -64,11 +123,11 @@
     "typescript": "5.8.3",
     "vite": "6.3.5",
     "vite-plugin-dts": "4.5.4",
-    "vitest": "3.2.4"
+    "vitest": "4.0.16"
   },
   "peerDependencies": {
-    "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
   },
   "files": [
     "dist"

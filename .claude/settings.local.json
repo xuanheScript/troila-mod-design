@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tree:*)",
+      "Bash(cat:*)",
+      "Bash(test:*)",
+      "Bash(pnpm add:*)",
+      "Bash(pnpm dlx:*)",
+      "Bash(pnpm build:lib:*)",
+      "Bash(ls:*)",
+      "Bash(timeout 30 pnpm dev:*)",
+      "Bash(pnpm build:*)",
+      "Bash(pnpm dev:*)",
+      "Bash(pnpm update:*)",
+      "Bash(pnpm info:*)",
+      "Bash(pnpm list:*)",
+      "Bash(rm:*)",
+      "Bash(pnpm install:*)",
+      "Bash(lsof:*)",
+      "Bash(xargs kill -9)",
+      "Bash(pnpm vite build:*)",
+      "mcp__mcp-chrome__chrome_navigate",
+      "mcp__mcp-chrome__chrome_network_debugger_start",
+      "mcp__mcp-chrome__chrome_network_capture_start",
+      "mcp__mcp-chrome__chrome_get_interactive_elements",
+      "mcp__mcp-chrome__chrome_fill_or_select",
+      "mcp__mcp-chrome__chrome_screenshot",
+      "mcp__mcp-chrome__chrome_click_element",
+      "mcp__mcp-chrome__chrome_get_web_content",
+      "mcp__mcp-chrome__chrome_keyboard",
+      "mcp__mcp-chrome__chrome_inject_script",
+      "mcp__mcp-chrome__chrome_network_capture_stop",
+      "mcp__mcp-chrome__chrome_console",
+      "Bash(pnpm test:*)",
+      "mcp__mcp-chrome__get_windows_and_tabs",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

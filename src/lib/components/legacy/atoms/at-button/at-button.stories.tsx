@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react-vite'
 import { AT_BUTTON_VARIANT, AtButton } from '.'
-import { objectValuesToControls } from '../../../storybook-utils'
+import { objectValuesToControls } from '../../../../storybook-utils'
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
@@ -27,10 +27,11 @@ export const Primary: Story = {
 }
 
 export const Secondary: Story = {
-args: {
-  label: 'Button',
-  variant: 'SECONDARY',
-}}
+  args: {
+    label: 'Button',
+    variant: 'SECONDARY',
+  }
+}
 
 export const Tertiary: Story = {
   args: {
@@ -40,8 +41,8 @@ export const Tertiary: Story = {
 }
 
 export const Disabled: Story = {
-args :{
-  label: 'Button',
-  isDisabled: true,
-}
+  args: {
+    label: 'Button',
+    isDisabled: true,
+  }
 }
