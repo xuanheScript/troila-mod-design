@@ -3,10 +3,28 @@
   "private": false,
   "version": "1.0.0",
   "description": "基于 shadcn/ui 的业务组件库，包含 ProTable、ProForm 等复合组件",
+  "keywords": [
+    "react",
+    "components",
+    "ui",
+    "shadcn-ui",
+    "tailwind",
+    "typescript",
+    "pro-components",
+    "table",
+    "form",
+    "upload"
+  ],
+  "author": "xuanheScript",
+  "license": "MIT",
+  "homepage": "https://github.com/xuanheScript/troila-mod-design#readme",
+  "bugs": {
+    "url": "https://github.com/xuanheScript/troila-mod-design/issues"
+  },
   "packageManager": "pnpm@10.12.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/IgnacioNMiranda/vite-component-library-template"
+    "url": "https://github.com/xuanheScript/troila-mod-design.git"
   },
   "main": "./dist/troila-pro-components.umd.js",
   "module": "./dist/troila-pro-components.es.js",
